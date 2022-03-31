@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/style.css">
+    <title>Kauppalista</title>
+</head>
+<body>
+
+    <header>
+        <h1>Kauppalista</h1>
+    </header>
+    <form>                                                  <!--Lomake kenttä javascriptillä täytettäväksi-->
+        <input type="text" class="osta-input">
+        <button class="osta-button" type="submit">          <!--Nappula tuotteiden lisäämistä varten-->
+            <i class="fas fa-plus-square"></i>
+        </button>
+        <div class="select">                                <!--Ostoslistan tuotteiden jako kolmeen eri kategoriaan-->
+        <select name="ostokset" class="filter-osta">
+            <option value="kaikki">Kaikki</option>
+            <option value="korissa">Valmiit</option>
+            <option value="eiKeratty">Kesken</option>
+        </select>
+        </div>
+    </form>
+
+    <div class="osta-container">                            <!--Tuotteet jotka lisätään lomakkeeseen tulevat tänne-->
+        <ul class="osta-list"></ul>
+    </div>
+    
+    <script src="/script.js"></script>
+</body>
+</html>
